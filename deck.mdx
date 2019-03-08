@@ -11,12 +11,89 @@ export { default as theme } from './theme'
 # JavaScript dla dzidziusów vol.1
 
 
-<ImageWithLabel label="JavaScript dla dzidziusów">
-  <img src="./static/at-start.jpg" />
+<ImageWithLabel>
+  <img src="./static/at-start.jpg " />
 </ImageWithLabel>
 Author: Artem Ovcharenko
 
 ---
+
+## <script>
+
+---
+```
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+          1 codu
+          ~~~
+          40k linijka
+        </script>
+    </head>
+    <body>
+      <div>"M jak Miłość", odcinek 1427: Pierwsze spotkanie Sonii i Rafała.</div>
+      <div>Ewa Minge opuszcza studio TVP z kocim towarzyszem w kieszeni (ZDJĘCIA)</div>
+      <div>Żona Glika urodziła córkę! (Z OSTATNIEJ CHWILI)</div>
+    </body>
+</html>
+
+---
+
+```
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <div>"M jak Miłość", odcinek 1427: Pierwsze spotkanie Sonii i Rafała.</div>
+      <div>Ewa Minge opuszcza studio TVP z kocim towarzyszem w kieszeni (ZDJĘCIA)</div>
+      <script>
+        1 codu
+        ~~~
+        40k linijka
+      </script>
+      <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
+    </body>
+</html>
+
+---
+
+```
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="path-to-minified-more-efficient-script"/>
+    </head>
+    <body>
+      <div>"M jak Miłość", odcinek 1427: Pierwsze spotkanie Sonii i Rafała.</div>
+      <div>Ewa Minge opuszcza studio TVP z kocim towarzyszem w kieszeni (ZDJĘCIA)</div>
+      <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
+    </body>
+</html>
+
+---
+
+
+```
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="path-to-first-minified-more-efficient-script"/>
+        <script src="path-to-second-minified-more-efficient-script">
+            //some code
+        </script>
+    </head>
+    <body>
+      <div>"M jak Miłość", odcinek 1427: Pierwsze spotkanie Sonii i Rafała.</div>
+      <div>Ewa Minge opuszcza studio TVP z kocim towarzyszem w kieszeni (ZDJĘCIA)</div>
+      <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
+    </body>
+</html>
 
 ---
 
