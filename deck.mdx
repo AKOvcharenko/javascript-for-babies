@@ -18,7 +18,7 @@ Author: Artem Ovcharenko
 
 ---
 
-## <script>
+## Tag '<script/>'
 
 ---
 ```
@@ -38,6 +38,7 @@ Author: Artem Ovcharenko
       <div>Żona Glika urodziła córkę! (Z OSTATNIEJ CHWILI)</div>
     </body>
 </html>
+```
 
 ---
 
@@ -58,6 +59,7 @@ Author: Artem Ovcharenko
       <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
     </body>
 </html>
+```
 
 ---
 
@@ -74,6 +76,7 @@ Author: Artem Ovcharenko
       <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
     </body>
 </html>
+```
 
 ---
 
@@ -94,8 +97,65 @@ Author: Artem Ovcharenko
       <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
     </body>
 </html>
+```
+---
+
+## Attributes async, defer
 
 ---
+
+```
+...
+    const समारोह = (परिणाम) => परिणाम;
+...
+    var परिवर्तनशील = समारोह();
+...
+    let temporaryResult = परिवर्तनशील * Math.rand();
+```
+---
+
+## var, let, const
+
+---
+
+```
+    console.log($);  //undefined
+
+    var $ = 'dollar';
+
+    console.log($); // 'dollar'
+```
+
+---
+
+
+```
+    var $;
+
+    console.log($);  //undefined
+
+    $ = 'dollar';
+
+    console.log($); // 'dollar'
+```
+
+---
+
+```
+function getDollar(earned) {
+    // $ exists here with a value of undefined
+
+    console.log($); // undefined
+    if (earned) {
+        var $ = 'dollar';
+        console.log($); // 'dollar';
+    }
+
+    return $;
+}
+```
+---
+
 
 ## Questions
 
