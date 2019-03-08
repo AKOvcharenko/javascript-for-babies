@@ -18,7 +18,7 @@ Author: Artem Ovcharenko
 
 ---
 
-## Tag '<script/>'
+## Tag `<script/>`
 
 ---
 ```
@@ -114,7 +114,7 @@ Author: Artem Ovcharenko
 ```
 ---
 
-## var, let, const
+## `var, let, const`
 
 ---
 
@@ -156,6 +156,66 @@ function getDollar(earned) {
 ```
 ---
 
+```
+    console.log($);  //error, no code bellow :'C
+
+    let $ = 'dollar';
+
+    console.log($);
+```
+---
+
+```
+    function getMoney(earned) {
+        // money doesn't exist here
+        // console.log(money); => ReferenceError: money is not defined
+        let money = 0;
+        if (true) {
+            let money = 100;
+        }
+
+        return money; // 0
+    }
+
+```
+
+---
+
+```
+    let name = 'name';
+    let name = ' not a name' // Identifier 'name' has already been declared
+
+```
+
+---
+
+```
+    // VIP module for Zbigniew only
+    (function () {
+        name = 'Zbigniew' // const or var missed here
+        //smth smth;
+    })();
+
+
+    // VIP module for Błażej only
+    (function() {
+        if (!name) {
+            name = 'Błażej';
+        }
+
+        console.log(name); // 'Zbigniew' :'C
+    })()
+
+```
+
+---
+
+## Variable's name cant:
+
+1. Starts from number. (100$)
+2. Contains dash. (varia-ble)
+3. Be reserved word: return, class, export etc.
+---
 
 ## Questions
 
