@@ -308,11 +308,20 @@ fifthSolder() // alert(5)
 ## Implicit
 
 1. Conversion to number
-    - unary `+`   ```+'2' === 2 // true```
+    - unary `+`
+    ```js
+        +'2' === 2 // true
+    ```
 2. Convertion to boolean
-    - !!  ```!!1 === true // true```
+    - !!
+    ```js
+        !!1 === true // true
+    ```
 3. convertion to string
-    - `+ ''`  ```js 1 + '1' === '11' // true```
+    - `+ ''`
+   ```js
+       1 + '1' === '11' // true
+   ```
 
 ---
 
@@ -561,6 +570,26 @@ fifthSolder() // alert(5)
 <ImageWithLabel>
   <img src="./static/go-deeper.png" />
 </ImageWithLabel>
+
+---
+```
+outer: for (var i = 0; i < 3; i++) {
+  for (var j = 0; j < 3; j++) {
+     if (j == 2) break;
+     if (i == 2) break outer;
+  }
+}
+
+```
+---
+## function
+
+---
+
+1. function declaration
+    ```js
+        function name () {}
+    ```
 
 ---
 
