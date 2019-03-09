@@ -296,7 +296,7 @@ fifthSolder() // alert(5)
 ## Explicit
 
 1. Conversion to number
-    - Number(smth)
+    - Number(primitive)/Number(complex[valueOf/toString])
     - parseInt/parseFloat - use for 'string like a number' conversion
 2. Conversion to string
     - String(smth)
@@ -312,7 +312,7 @@ fifthSolder() // alert(5)
 2. Convertion to boolean
     - !!  ```!!1 === true // true```
 3. convertion to string
-    - `+ ''`  ```1 + '1' === '11' // true```
+    - `+ ''`  ```js 1 + '1' === '11' // true```
 
 ---
 
@@ -327,6 +327,239 @@ fifthSolder() // alert(5)
 
 <ImageWithLabel>
   <img src="./static/double-equal.png" />
+</ImageWithLabel>
+
+---
+
+```
+    'Arbuz' < 'Jabko' // true
+    'Arbuz' > 'Arbu'  // true
+    'Arbuz' < 'arbuz' // true
+    'Arbuz' < 'a'     // true
+    '2' > '14'        //true
+```
+
+---
+```
+    [] < 1      // true
+    false < 1   // true
+    '34' > [45] // false
+```
+---
+```
+ undefined > 0  // false
+ undefined < 0  // false
+ undefined == 0 // false
+```
+---
+
+```
+ null > 0  // false
+ null < 0  // false
+ null == 0 // false
+ null >= 0 // true!
+```
+---
+
+```
+    const getStickers = (donation) => {
+         let stickersAmount;
+
+         if (donation > 50) {
+            stickersAmount = 5;
+         }
+
+         if (donation === 50 ) {
+            stickersAmount = 5;
+         }
+
+         if (donation === 40 ) {
+            stickersAmount = 4;
+         }
+
+         if (donation === 30) {
+            stickersAmount = 3;
+         }
+
+         if (donation === 20) {
+            stickersAmount = 2;
+         }
+
+         if (donation === 10) {
+             stickersAmount = 1;
+         }
+
+         if (donation === 0) {
+             stickersAmount = 0;
+         }
+
+         return stickersAmount;
+    }
+
+```
+---
+
+```
+    const getStickers = (donation) => {
+        let stickersAmount;
+
+        switch (donation) {
+          case 0:  stickersAmount = 0;
+          case 10: stickersAmount = 1;
+          case 20: stickersAmount = 2;
+          case 30: stickersAmount = 3;
+          case 40: stickersAmount = 4;
+          case 50: stickersAmount = 5;
+          default: stickersAmount = 5;
+        }
+
+        return stickersAmount;
+    }
+
+```
+---
+
+```
+    const popUpText = (donation) => {
+        if (donation > 0) {
+            return 'Thank You for Your Donation';
+        } else  {
+            return 'Donate please';
+        }
+    }
+
+```
+---
+
+```
+    const popUpText = (donation) =>
+        donation > 0 ? 'Thank You for Your Donation' : 'Donate please';
+---
+
+```
+    const popUpText = (donation) =>
+        donation > 10 ?
+         'You will have 2 additional Biedronka stickers!' :
+          donation > 0 ?
+           'You will have 1 additional Biedronka sticker!' :
+           'Donate please';
+---
+
+```
+    const getAllUserDonations = (id) => {
+        const userToken = getUserToken(id);
+
+        const firstPossibleResult = heavyFunction(userToken);
+        const secondPossibleResult = heavierFunction(userToken);
+        const thirdPossibleResult = heaviestFunction(userToken);
+
+        return firstPossibleResult || secondPossibleResult || thirdPossibleResult;
+    }
+
+---
+
+```
+    const getAllUserDonations = (id) => {
+        const userToken = getUserToken(id);  // || defaultToken
+
+        // const firstPossibleResult = heavyFunction(userToken);
+        // const secondPossibleResult = heavierFunction(userToken);
+        // const thirdPossibleResult = heaviestFunction(userToken);
+
+        //return firstPossibleResult || secondPossibleResult || thirdPossibleResult;
+        return userToken && (heavyFunction(userToken) || heavierFunction(userToken) || heaviestFunction(userToken));
+    }
+---
+
+## Loops
+
+1. `while(){}`
+2. `do{} while()`
+3. `for`
+
+---
+
+```
+    let i = 0;
+
+    while(i < 4) {
+        console.log(i);
+        i += 1;
+    }
+
+    // 0, 1, 2, 3, 4
+
+    let j = 0;
+    do{
+		console.log(j)
+		j +=1
+	}
+    while(j < 4)
+
+    // 0, 1, 2, 3, 4
+```
+---
+
+
+```
+    for(var i = 0; i < 5; i += 1 ) {
+        console.log(i);
+    }
+    // 0, 1, 2, 3, 4
+
+    var j = 0;
+    for(; j < 4; ) {
+        console.log(j);
+        j += 1;
+    }
+    // 0, 1, 2, 3, 4
+
+    for(;;) {} // infinity loop
+```
+---
+
+`continue`, `break`
+
+---
+```
+    let i = 0;
+    while (i < 4) {
+      console.log(i)
+
+      if (i === 2) {
+        break;
+      }
+
+      i += 1;
+    }
+    // 0, 1, 2
+
+
+    for(var j = 0; j < 5; j += 1 ) {
+      console.log(j)
+      if (j === 2) {
+        break;
+      }
+    }
+    // 0, 1, 2
+
+```
+
+---
+```
+    for(var j = 0; j < 5; j += 1 ) {
+      if (j === 2) {
+        continue;
+      }
+      console.log(j)
+    }
+    // 0, 1, 3, 4
+```
+
+---
+
+<ImageWithLabel>
+  <img src="./static/go-deeper.png" />
 </ImageWithLabel>
 
 ---
