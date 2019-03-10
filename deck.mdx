@@ -588,11 +588,91 @@ outer: for (var i = 0; i < 3; i++) {
 
 1. function declaration
     ```js
-        function name () {}
+    function name (arg1, arg2) {}
     ```
+2. function expression
+    ```js
+    const name = function (arg1, arg2) {}
+    ```
+3. named function expression
+    ```js
+    const name = function funcName (arg1, arg2) {}
+    ```
+---
+```
+    var glob = 2
+    function getTwiceGlob () {
+        const multiplier = 2;
+
+        return  multiplier * glob;
+    }
+
+```
 
 ---
 
+```
+    const gimmeFive = function (first = 1, second = 15) {
+        console.log(first, second);
+        return 5;
+    }
+```
+---
+
+```
+    const gimmeSmth = function vif (first = 1, second = 15) {
+        return first + second;
+    }
+
+    const gimmeUndefined = function (first = 1, second = 15) {
+       console.log(first, second);
+       return;
+       // or maybe even without return function returns undefined
+    }
+```
+---
+```
+    console.log(fd);  // function
+    console.log(fe);  // undefined
+    console.log(nfe); // undefined
+    // console.log(nf); -> error nf is not defined
+
+    function fd () {}
+    const fe = function () {}
+    const nfe = function nf () {}
+
+    console.log(fd);  // function
+    console.log(fe);  // function
+    console.log(nfe); // function
+    // console.log(nf); -> error nf is not defined
+
+```
+---
+##More ways for `function` initialization
+1. arrow function
+```js
+const robinHoodsArrow = () => {}
+```
+2. new Function
+```js
+new Function('a, b', 'return a + b');
+```
+3. immediately invoked function expressions
+```js
+    (function(arg1, arg2) {
+        //do any magic here
+    })(arg1, arg2)
+```
+---
+    ```js
+        const withSecretData = (function(arg1, arg2) {
+            //here we will store some secret data
+            return () => {
+                // secret data is available here
+            }
+        })(arg1, arg2)
+    ```
+---
 
 ## Questions
 
