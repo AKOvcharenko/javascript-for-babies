@@ -648,7 +648,8 @@ outer: for (var i = 0; i < 3; i++) {
 
 ```
 ---
-##More ways for `function` initialization
+## More ways for `function` initialization
+
 1. arrow function
 ```js
 const robinHoodsArrow = () => {}
@@ -659,18 +660,18 @@ new Function('a, b', 'return a + b');
 ```
 3. immediately invoked function expressions
 ```js
-    (function(arg1, arg2) {
-        //do any magic here
-    })(arg1, arg2)
+(function(arg1, arg2) {
+    //do any magic here
+})(arg1, arg2)
 ```
 ---
-    ```js
-        const withSecretData = (function(arg1, arg2) {
-            //here we will store some secret data
-            return () => {
-                // secret data is available here
-            }
-        })(arg1, arg2)
+    ```
+    const withSecretData = (function(arg1, arg2) {
+        //here we will store some secret data
+        return () => {
+            // secret data is available here
+        }
+    })(arg1, arg2)
     ```
 ---
 
