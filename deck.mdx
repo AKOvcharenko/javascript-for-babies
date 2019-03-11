@@ -68,24 +68,6 @@ Author: Artem Ovcharenko
 <html>
     <head>
         <meta charset="utf-8">
-        <script src="path-to-minified-more-efficient-script"/>
-    </head>
-    <body>
-      <div>"M jak Miłość", odcinek 1427: Pierwsze spotkanie Sonii i Rafała.</div>
-      <div>Ewa Minge opuszcza studio TVP z kocim towarzyszem w kieszeni (ZDJĘCIA)</div>
-      <div>Nowe zdjęcia Ratajkowski w reklamie kostiumów kąpielowych</div>
-    </body>
-</html>
-```
-
----
-
-
-```
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
         <script src="path-to-first-minified-more-efficient-script"/>
         <script src="path-to-second-minified-more-efficient-script">
             //some code
@@ -106,11 +88,11 @@ Author: Artem Ovcharenko
 
 ```
 ...
-    const समारोह = (परिणाम) => परिणाम;
+    let समारोह = (परिणाम) => परिणाम;
 ...
     var परिवर्तनशील = समारोह();
 ...
-    let temporaryResult = परिवर्तनशील * Math.rand();
+    const temporaryResult = परिवर्तनशील * Math.rand();
 ```
 ---
 
