@@ -210,22 +210,6 @@ function getDollar(earned) {
 
 ---
 
-## Task 1.
-
-1. Write a function `createArmy`, which will create army - array of 'solders'(array of functions).
-2. Each solder can say his position in array(alert(position))
-
-```
-const createArmy = (number) => [function*number]
-const army = createArmy(number);
-
-const fifthSolder = army(5);
-
-fifthSolder() // alert(5)
-```
-
----
-
 ## Variable's name cant:
 
 1. Starts from number. (100$)
@@ -478,6 +462,19 @@ fifthSolder() // alert(5)
         //return firstPossibleResult || secondPossibleResult || thirdPossibleResult;
         return userToken && (heavyFunction(userToken) || heavierFunction(userToken) || heaviestFunction(userToken));
     }
+---
+
+```
+for(;;) {
+  // some code
+  if (donation > 100) break;
+  donation += value;
+}
+---
+
+<ImageWithLabel>
+  <img src="./static/loop.jpg" />
+</ImageWithLabel>
 ---
 
 ## Loops
